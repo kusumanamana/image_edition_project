@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Image edition</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .layout {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .panel {
+            flex: 2;
+            background-color: rgb(236, 236, 112);
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .imageArea {
+            flex: 5;
+            background-color: blanchedalmond;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button {
+            height: 60px;
+            width: 250px;
+            padding: 10px;
+            border-radius: 7px;
+            border: none;
+            background-color: #0a91c6;
+            transition: background-color ease-in-out 0.4s;
+            font-size: larger;
+        }
+
+        input.button {
+            background-color: rgb(13, 88, 63);
+        }
+
+        input.button:hover {
+            background-color: rgb(5, 29, 21);
+        }
+
+        .button:hover {
+            background-color: rgb(223, 133, 15);
+        }
+
+        .text-color-input {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="layout">
+    <div id="configPanel" class="panel">
+        <a download="myImage.jpg" id="generateMeme"><button class="button">Download meme</button></a>
+        <input type="file" name="" id="memeImage" accept="image/*" class="button">
+        <input type="text" id="textInput" placeholder="Enter text" class="button">
+        <input type="color" id="textColorInput" value="#ffffff" class="button text-color-input">
+    </div>
+    <div id="image" class="imageArea">
+        <canvas id="memeCanvas"></canvas>
+    </div>
+</div>
+</body>
+</html>
